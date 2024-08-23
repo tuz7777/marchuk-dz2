@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Column Layout</title>
+</head>
+<style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body div {
+            display: inline-block;
+            transform: rotate(180deg);
+        }
+        body div .star{
+            width: 78px;
+            height: 78px;
+            background: url('images/star0.png');
+        }
+        .star:hover{
+            background: url('images/star1.png');
+        }
+        div:hover ~ .star,
+        div:hover ~ .star:hover{
+            background: url('images/star1.png');
+
+        }
+</style>
+<body>
+    <div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+        <div class="star"></div>
+    </div>
+</body>
+
+</html>
