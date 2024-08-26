@@ -4,118 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>docks</title>
+    <title>Document</title>
 </head>
-<style>
-    
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 18px;
-}
 
-body > div:not(:last-child){
-    margin-bottom: 20px;
-}
-.first table tr a{
-    display: block;
-    padding: 10px;
-    box-sizing: border-box;
-    color: green;
-    border-right: 3px solid red;
-}
-.first table tr td:last-child a{
-    border: none;
-}
-.second div:not(:last-child){
-    margin-bottom: 2px;
-}
-.second div a{
-    display: inline-block;
-    color: green;
-    padding: 10px;
-
-}
-.second div a:not(:last-child){
-    border-right: 3px solid red;
-
-}
-
-</style>
 <body>
-   <div class="first">
-    <table>
-        <tr>
-            <td><a href="">первая ссылка</a></td>
-            <td><a href="">вторая ссылка</a></td>
-            <td><a href="">третья ссылка</a></td>
-            <td><a href="">четвертая ссылка</a></td>
-            <td><a href="">пятая ссылка</a></td>
-        </tr>
-        <tr>
-            <td><a href="">первая ссылка</a></td>
-            <td><a href="">вторая ссылка</a></td>
-            <td><a href="">третья ссылка</a></td>
-            <td><a href="">четвертая ссылка</a></td>
-            <td><a href="">пятая ссылка</a></td>
+    <style>
+        .first table a {
+            color: green;
+            border-right: solid red 4px;
+            padding: 8px;
+            margin-bottom: 6px;
+            display: block;
+        }
 
-        </tr>
-        <tr>
-            <td><a href="">первая ссылка</a></td>
-            <td><a href="">вторая ссылка</a></td>
-            <td><a href="">третья ссылка</a></td>
-            <td><a href="">четвертая ссылка</a></td>
-            <td><a href="">пятая ссылка</a></td>
+        td:last-child a {
+            border: none
+        }
 
-        </tr>
-        <tr>
-            <td><a href="">первая ссылка</a></td>
-            <td><a href="">вторая ссылка</a></td>
-            <td><a href="">третья ссылка</a></td>
-            <td><a href="">четвертая ссылка</a></td>
-            <td><a href="">пятая ссылка</a></td>
-
-        </tr>
-    </table>
-   </div>
-   <div class="second">
-        <div >
-            <a href="">первая ссылка</a>
-            <a href="">вторая ссылка</a>
-            <a href="">третья ссылка</a>
-            <a href="">четвертая ссылка</a>
-            <a href="">пятая ссылка</a>
+        .first table td a:hover {
+            color: red;
+        }
+        .second span a{
+            color: green;
+            padding: 8px;
+        }
+        .second span::after{
+            content:''; 
+            display: inline-block;
+            width: 4px;
+            height: 33px;
+            background-color: red;
+            vertical-align: middle;
+        }
+        .second span:last-child::after{
+            display: none;
+        }
+        
+    </style>
+    <div class="first">
+        <table>
+            <tr>
+                <td><a href="">первая ссылка</a></td>
+                <td><a href="">вторая ссылка</a></td>
+                <td><a href="">третья ссылка</a></td>
+                <td><a href="">четвертая ссылка</a></td>
+                <td><a href="">пятая ссылка</a></td>
+            </tr>
+        </table>
+        <!-- первый способ таблицы -->
+        <div class="second">
+         <span><a href="">первая ссылка</a></span>
+         <span><a href="">вторая ссылка</a></span>
+         <span><a href="">третья ссылка</a></span>
+         <span><a href="">четвертая ссылка</a></span>
+         <span><a href="">пятая ссылка</a></span>
         </div>
-        <div>
-            <a href="">первая ссылка</a>
-            <a href="">вторая ссылка</a>
-            <a href="">третья ссылка</a>
-            <a href="">четвертая ссылка</a>
-            <a href="">пятая ссылка</a>
-        </div>
-        <div>
-            <a href="">первая ссылка</a>
-            <a href="">вторая ссылка</a>
-            <a href="">третья ссылка</a>
-            <a href="">четвертая ссылка</a>
-            <a href="">пятая ссылка</a>
-        </div>
-        <div >
-            <a href="">первая ссылка</a>
-            <a href="">вторая ссылка</a>
-            <a href="">третья ссылка</a>
-            <a href="">четвертая ссылка</a>
-            <a href="">пятая ссылка</a>
-        </div>
-        <div >
-            <a href="">первая ссылка</a>
-            <a href="">вторая ссылка</a>
-            <a href="">третья ссылка</a>
-            <a href="">четвертая ссылка</a>
-            <a href="">пятая ссылка</a>
-        </div>
-   </div>
+        <!-- второй способ -->
+         
 </body>
 
 </html>
